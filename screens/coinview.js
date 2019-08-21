@@ -40,10 +40,6 @@ class CoinView extends React.Component {
                 this.props.refreshDate(now); //Run function type props
             }
 
-            if(this.props.sayHello != null) {
-                this.props.sayHello('ggggg'); //Run function type props
-            }
-
             await this.setState({
                 coinDatas: responseJson,
                 isLoading: false,
