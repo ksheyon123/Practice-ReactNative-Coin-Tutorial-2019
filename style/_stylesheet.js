@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
         width: '100%',
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'flex-start'
+        backgroundColor: 'black',
+        // alignItems: 'center',
+        // justifyContent: 'flex-start'
 
     },
     containerForCoinItem: {
         width: '100%',
-        height: 80,
+        height: 100,
         flexDirection: 'row',
-        backgroundColor: 'skyblue',
+        backgroundColor: 'linen',
         alignItems: 'center',
         justifyContent: 'space-around',
         marginTop: 5,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
     },
     textForCoinItem: {
         color: 'white'
-    }
+    },
 });
 
 module.exports = {

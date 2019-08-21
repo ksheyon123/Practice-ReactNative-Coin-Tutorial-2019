@@ -1,0 +1,92 @@
+//https://api.coinmarketcap.com/v1/ticker/
+
+const sampledata = [
+    {
+    "id": "bitcoin", 
+    "name": "Bitcoin", 
+    "symbol": "BTC", 
+    "rank": "1", 
+    "price_usd": "10636.5361295", 
+    "price_btc": "1.0", 
+    "24h_volume_usd": "15550652260.9", 
+    "market_cap_usd": "190266092371", 
+    "available_supply": "17887975.0", 
+    "total_supply": "17887975.0", 
+    "max_supply": "21000000.0", 
+    "percent_change_1h": "-0.61", 
+    "percent_change_24h": "-1.96", 
+    "percent_change_7d": "-0.69", 
+    "last_updated": "1566357154"
+}, 
+{
+    "id": "ethereum", 
+    "name": "Ethereum", 
+    "symbol": "ETH", 
+    "rank": "2", 
+    "price_usd": "193.719479549", 
+    "price_btc": "0.01821929", 
+    "24h_volume_usd": "6974286011.23", 
+    "market_cap_usd": "20806771707.0", 
+    "available_supply": "107406709.0", 
+    "total_supply": "107406709.0", 
+    "max_supply": null, 
+    "percent_change_1h": "-0.45", 
+    "percent_change_24h": "-3.43", 
+    "percent_change_7d": "-6.73", 
+    "last_updated": "1566357145"
+}, 
+{
+    "id": "ripple", 
+    "name": "XRP", 
+    "symbol": "XRP", 
+    "rank": "3", 
+    "price_usd": "0.2715750913", 
+    "price_btc": "0.00002554", 
+    "24h_volume_usd": "1112626077.43", 
+    "market_cap_usd": "11648048034.0", 
+    "available_supply": "42890708341.0", 
+    "total_supply": "99991376954.0", 
+    "max_supply": "100000000000", 
+    "percent_change_1h": "-0.7", 
+    "percent_change_24h": "-3.02", 
+    "percent_change_7d": "-7.93", 
+    "last_updated": "1566357124"
+}, 
+{
+    "id": "bitcoin-cash", 
+    "name": "Bitcoin Cash", 
+    "symbol": "BCH", 
+    "rank": "4", 
+    "price_usd": "310.958343749", 
+    "price_btc": "0.02924559", 
+    "24h_volume_usd": "1180983209.09", 
+    "market_cap_usd": "5584388173.0", 
+    "available_supply": "17958638.0", 
+    "total_supply": "17958638.0", 
+    "max_supply": "21000000.0", 
+    "percent_change_1h": "-0.96", 
+    "percent_change_24h": "-3.6", 
+    "percent_change_7d": "-10.32", 
+    "last_updated": "1566357126"
+}, 
+{
+    "id": "litecoin", 
+    "name": "Litecoin", 
+    "symbol": "LTC", 
+    "rank": "5", 
+    "price_usd": "74.7859615466", 
+    "price_btc": "0.00703361", 
+    "24h_volume_usd": "2627307840.44", 
+    "market_cap_usd": "4717374048.0", 
+    "available_supply": "63078337.0", 
+    "total_supply": "63078337.0", 
+    "max_supply": "84000000.0", 
+    "percent_change_1h": "-0.68", 
+    "percent_change_24h": "-2.29", 
+    "percent_change_7d": "-11.51", 
+    "last_updated": "1566357124"
+}, 
+]
+module.exports = {
+    sampledata
+}
