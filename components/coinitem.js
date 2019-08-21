@@ -4,10 +4,6 @@ import { styles } from '../style/_stylesheet';
 import { black } from 'ansi-colors';
 
 class CoinItem extends React.Component {
-
-    onPress = () => {
-        this.props.navigation.navigate()
-    }
     render() {
         return (
             <View style={styles ?.containerForCoinItem}>
@@ -29,7 +25,6 @@ class CoinItem extends React.Component {
                     <Text style={[styles ?.textForCoinItem, {fontSize:20, color:'black' }]}>
                         {'#' + (this.props.rank || 'Rank')}
                     </Text>
-                    <Button>세부 정보</Button>
                 </View>
             </View>
         )
