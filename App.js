@@ -1,26 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { View, Text } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-=======
-import { Text, View } from 'react-native';
-import { styles } from './style/_stylesheet';
-import { CoinView } from './screens/coinview';
-import { TopBar } from './components/topbar';
-// import { supportsOrientationLockAsync } from 'expo/build/ScreenOrientation/ScreenOrientation';
-// import { createStackNavigator, createAppContainer } from 'react-navigation';
-// import { DetailsScreen } from './screens/detailsScreen';
-
-
-// const detailStack = createStackNavigator(
-//   {
-//     Details: DetailsScreen
-//   },
-// )
-
-// const AppContainer = createAppContainer(detailStack);
-
->>>>>>> 326348ccba44b2d2e5f1aa7bf69eddec14c1ad05
 
 import Home from './screens/Home';
 import Youtube from './screens/Youtube';
@@ -63,31 +43,15 @@ const MainStack = createStackNavigator ({
     headerStyle: {
       backgroundColor: "pink"
     },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
   }
 })
 
-<<<<<<< HEAD
 const AppContainer = createAppContainer(MainStack) 
 
 const App = () => {
   return (
     <AppContainer />
   )
-=======
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.statusBar} />
-        <TopBar title="Coin List" refreshDate={this.state.refreshDate}></TopBar>
-        <CoinView refreshDate={this._setRefreshDate} style={styles.InAppCoinView}></CoinView>
-      </View>
-    );
-  }
->>>>>>> 326348ccba44b2d2e5f1aa7bf69eddec14c1ad05
 }
 
 export default App
