@@ -1,33 +1,61 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { styles } from './style/_stylesheet';
-import { CoinView } from './screens/coinview';
-import { TopBar } from './components/topbar';
-import { supportsOrientationLockAsync } from 'expo/build/ScreenOrientation/ScreenOrientation';
+import { View, Text } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-export default class App extends React.Component {
+import Home from './screens/Home';
+import Youtube from './screens/Youtube';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      refreshData: '-',
+const Header = (props) => {
+  return (
+    <View style={{flex: 1, alignItems: 'center'}}>
+      <Text style={{fontSize: 18}}>{props.title}</Text>
+      <Text style={{fontSize: 13, color: 'gray'}}>{props.subtitle}</Text>
+    </View>
+  )
+}
+const MainStack = createStackNavigator ({
+  Home: {
+    screen: Home,
+    navigationOptions: ({navigation}) => {
+      return {
+        headerTitle: (
+          <Header
+          title={'Show Me Coin'}
+          subtitle={navigation.getParam('refreshDate', '-')}
+          />
+        ),
+        headerStyle: {
+          backgroundColor: 'pink',
+        },
+      }
+    },
+  },
+  Youtube: {
+    screen: Youtube,
+    navigationOptions: ({navigation}) => {
+      return {
+        title: navigation.getParam('title', 'YOUTUBE'),
+      }
     }
   }
-
-  _setRefreshDate = (date) => {
-    console.log('Updated: ' + date);
-    this.setState({
-      refreshDate: date,
-    })
+}, {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: "pink"
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   }
+})
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.statusBar} />
-        <TopBar title="Coin List" refreshDate ={this.state.refreshDate}></TopBar>
-        <CoinView sayHello={(text) => { console.log(text) }} refreshDate={this._setRefreshDate} style={styles.InAppCoinView}></CoinView>
-      </View>
-    );
-  }
+const AppContainer = createAppContainer(MainStack) 
+
+const App = () => {
+  return (
+    <AppContainer />
+  )
 }
+
+export default App

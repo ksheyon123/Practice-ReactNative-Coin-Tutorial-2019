@@ -1,3 +1,8 @@
 ctrl+shift+p : theme <- 분위기 설정
 GlassIt-VSC extension <- transparent
 https://api.coinmarketcap.com/v1/ticker/
+
+yarn add react-native-gesture-handler
+yarn add react-native-reanimated
+
+yarn add react-native-webview

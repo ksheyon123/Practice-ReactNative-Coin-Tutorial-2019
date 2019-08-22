@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#C2185B',
         height: Constants.statusBarHeight
     },
-    container: {
-        flex: 1
-    },
+    // container: {
+    //     flex: 1
+    // },
     containerForTopBar : {
         alignSelf: 'stretch',
         height: 52,
